@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpaceClicker</title>
+    <link rel="shortcut icon" href="icon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/downloadjs/1.4.8/download.min.js"></script>
+</head>
+
+<body oncontextmenu="return false;">
+    <video autoplay muted loop id="bgVideo">
+        <source src="Universe.mp4" type="video/mp4">
+    </video>
+    <div class="center" id="box">
+        <div id="startScreen">
+            <h1>Just press a key and begin</h1>
+        </div>
+        <div id="ingameScreen" style="display: none;">
+            <h1><span id="keyname"></span></h1>
+            <progress max="300" value="0" id="progress"></progress>
+            <h2><span id="clicks"></span><br></h2>
+            <h2><span id="seconds"></span>s</h2>
+        </div>
+        <div id="endScreen" style="display: none;">
+            <h1><span id="keynameEnd"></span></h1>
+            <h2>Done in <span id="secondsEnd"></span>s</h2>
+            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button"
+                data-text="I hit a new record on SpaceClicker" data-hashtags="SpaceClicker" data-dnt="true"
+                data-show-count="false">Tweet</a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+    </div>
+</body>
+<script src="main.js"></script>
+
+</html>

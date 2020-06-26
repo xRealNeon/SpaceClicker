@@ -48,3 +48,20 @@ progress[value] {
     width: 250px;
     height: 20px;
 }
+
+select {
+    width: 140px;
+    height: 35px;
+    padding: 5px 35px 5px 5px;
+    font-size: 18px;
+    border: 2px solid #ccc;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url("/uploads/media/default/0001/02/f7b4d3d2ba3fe1d8518e6e63d7740e1e73921abf.png") 96% / 15% no-repeat #eee;
+}
+
+select::-ms-expand {
+    display: none;
+    /* Standardpfeil im IE 10 und 11 entfernen */
+}

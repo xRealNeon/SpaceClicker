@@ -7,6 +7,7 @@ var end = false;
 
 var clicks = 0;
 var key;
+var level;
 
 var startDate;
 var endDateM;
@@ -22,6 +23,9 @@ document.onkeydown = function (event) {
     if (running == false && end == false) {
         running = true;
         key = event.code;
+        level = document.getElementById("level").value;
+        document.getElementById("progress").max = level;
+        console.log(level);
         startScreen.style.display = "none";
         ingameScreen.style.display = "block";
         document.getElementById("keyname").innerHTML = event.code;
@@ -32,9 +36,9 @@ document.onkeydown = function (event) {
     }
     if (running == true && end == false && key == event.code) {
         clicks++;
-        document.getElementById("clicks").innerHTML = `${clicks}/300`;
+        document.getElementById("clicks").innerHTML = `${clicks}/${level}`;
         document.getElementById("progress").value = clicks;
-        if (clicks == 300) {
+        if (clicks == level) {
             startScreen.style.display = "none";
             ingameScreen.style.display = "none";
             endScreen.style.display = "block";

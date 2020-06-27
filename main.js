@@ -45,6 +45,7 @@ document.onkeydown = function (event) {
             endDate = new Date();
             document.getElementById("secondsEnd").innerHTML = (endDate.getTime() - startDate.getTime()) / 1000;
             document.getElementById("keynameEnd").innerHTML = event.code;
+            document.getElementById("levelEnd").innerHTML = level;
             clearInterval(timer);
         }
     }

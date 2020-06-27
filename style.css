@@ -53,7 +53,7 @@ body {
 }
 
 .btn-red:hover {
-    background-color: #e74c3c;
+    background-color: #c0392b;
 }
 
 progress[value]::-webkit-progress-value {

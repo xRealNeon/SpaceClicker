@@ -17,7 +17,7 @@
     <video autoplay muted loop id="bgVideo">
         <source src="Universe.mp4" type="video/mp4">
     </video>
-    <div class="center" id="box">
+    <div class="center" id="box" style="filter: blur(4px);">
         <div id="startScreen">
             <h1>Just press a key and begin</h1>
             <p>Select Level: </p><select id="level">
@@ -44,6 +44,7 @@
             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
     </div>
+    <div class="loader" id="loader">Loading...</div>
 </body>
 <script src="main.js"></script>
 

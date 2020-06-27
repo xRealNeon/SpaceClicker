@@ -59,3 +59,12 @@ function downloadResult() {
         download(canvas.toDataURL("image/png"), "SpaceClickerResult.png", "image/png");
     });
 }
+
+window.addEventListener("load", function () {
+    document.getElementById("box").style.animation = "fadeBlur 1s";
+    document.getElementById("loader").style.opacity = 0;
+    setTimeout(function () {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("box").style.filter = "";
+    }, 1000);
+});

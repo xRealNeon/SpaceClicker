@@ -19,13 +19,11 @@ document.onkeydown = function (event) {
         return false;
     }
     this.className = 'hold';
-    console.log(`${event.code}`);
     if (running == false && end == false) {
         running = true;
         key = event.code;
         level = document.getElementById("level").value;
         document.getElementById("progress").max = level;
-        console.log(level);
         startScreen.style.display = "none";
         ingameScreen.style.display = "block";
         document.getElementById("keyname").innerHTML = event.code;

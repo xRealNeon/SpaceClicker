@@ -46,6 +46,7 @@ document.onkeydown = function (event) {
             document.getElementById("secondsEnd").innerHTML = (endDate.getTime() - startDate.getTime()) / 1000;
             document.getElementById("keynameEnd").innerHTML = event.code;
             document.getElementById("levelEnd").innerHTML = level;
+            document.getElementById("tweet").href = encodeURI(`https://twitter.com/intent/tweet?text=I hit a new record on SpaceClicker. ${level} clicks in ${(endDate.getTime() - startDate.getTime()) / 1000} seconds. Try it yourself on&hashtags=SpaceClicker&url=https://neocde.me/SpaceClicker`);
             clearInterval(timer);
         }
     }
@@ -59,6 +60,15 @@ function downloadResult() {
     html2canvas(document.getElementById("box")).then(canvas => {
         download(canvas.toDataURL("image/png"), "SpaceClickerResult.png", "image/png");
     });
+}
+
+function reset() {
+    document.getElementById("progress").value = 0;
+    running = false;
+    end = false;
+    clicks = 0;
+    startScreen.style.display = "block";
+    endScreen.style.display = "none";
 }
 
 window.addEventListener("load", function () {

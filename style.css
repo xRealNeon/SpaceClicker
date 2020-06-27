@@ -26,6 +26,36 @@ body {
     background-color: rgba(1, 1, 1, 0.8);
 }
 
+.btn {
+    background-color: #2ecc71;
+    color: #f1f1f1;
+    transition: 0.3s;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #27ae60;
+}
+
+.btn-blue {
+    background-color: #3498db;
+}
+
+.btn-blue:hover {
+    background-color: #2980b9;
+}
+
+.btn-red {
+    background-color: #e74c3c;
+}
+
+.btn-red:hover {
+    background-color: #e74c3c;
+}
+
 progress[value]::-webkit-progress-value {
     background: rgb(8, 54, 255);
     border-radius: 2px;
